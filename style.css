@@ -39,8 +39,9 @@ h2 {
 }
 
 .img {
-    aspect-ratio: 1/1;
-    height: 500px;
+    margin-top: 60px;
+    height: 400px;
+    width: 400px;
     border-radius: 30px;
     overflow: hidden;
 }
@@ -48,7 +49,7 @@ h2 {
 img {
     scale: 1.2;
     aspect-ratio: 1/1;
-    height: 500px;
+    height: 400px;
     object-fit: fill;
 }
 
@@ -101,4 +102,28 @@ p {
     align-self: end;
     margin-bottom: 24px;
     text-decoration: none;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1470px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .cta {
+        align-self: start;
+        margin-bottom: 0;
+    }
+
+    .intro {
+        flex-direction: column;
+    }
+
+    body {
+        grid-template-columns: [full-width-start] 60px [breakout-start] 60px [content-start] 1fr [content-end] 60px [breakout-end] 60px [full-width-end];
+    }
 }
